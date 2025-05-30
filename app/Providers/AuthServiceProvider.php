@@ -12,8 +12,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array<class-string, class-string>
      */
     protected $policies = [
-        // Daftarkan model ke policy-nya di sini
-        // Contoh: \App\Models\Ticket::class => \App\Policies\TicketPolicy::class,
+     App\Policies\TicketPolicy::class,
     ];
 
     /**

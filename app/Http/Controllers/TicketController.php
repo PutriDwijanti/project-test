@@ -82,7 +82,7 @@ class TicketController extends Controller
     // Form edit (hanya agent/admin)
     public function edit(Ticket $ticket)
     {
-        $this->authorize('update', $ticket); // Policy nanti
+        $this->authorize('update', $ticket); 
         $categories = Category::all();
         $labels = Label::all();
         return view('tickets.edit', compact('ticket', 'categories', 'labels'));

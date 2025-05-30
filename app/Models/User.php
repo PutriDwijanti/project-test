@@ -20,7 +20,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'role', // ← penting agar kolom role bisa di-set dari form / seeder
+        'role', 
     ];
 
     /**

@@ -59,7 +59,7 @@ class TicketController extends Controller
             'priority' => $request->priority,
             'status' => 'open',
             'user_id' => Auth::id(),
-            'agent_id' => null, // Belum ada agent assigned
+            'agent_id' => null,
         ]);
 
         return redirect()->route('user.tickets.index')->with('success', 'Tiket berhasil dibuat.');
@@ -90,9 +90,6 @@ class TicketController extends Controller
 
         return back()->with('success', 'Komentar berhasil ditambahkan.');
     }
-
-    // User tidak boleh edit/hapus tiket
-    // Maka method edit, update, destroy tidak dibuat di sini
 
     private function authorizeTicket(Ticket $ticket)
     {
